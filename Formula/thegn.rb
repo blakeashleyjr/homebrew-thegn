@@ -6,7 +6,7 @@
 class Thegn < Formula
   desc "Terminal-native git-worktree IDE that is its own terminal multiplexer"
   homepage "https://github.com/blakeashleyjr/thegn"
-  version "0.1.0-alpha.131"
+  version "0.1.0-alpha.135"
   license any_of: ["MIT", "Apache-2.0"]
 
   depends_on :macos
@@ -14,8 +14,8 @@ class Thegn < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/blakeashleyjr/thegn/releases/download/v0.1.0-alpha.131/thegn-v0.1.0-alpha.131-aarch64-apple-darwin.tar.gz"
-      sha256 "8b1ad3b14fe776484f25cae5cf035f9603b6111a984f2e552bf81fe9079e3471"
+      url "https://github.com/blakeashleyjr/thegn/releases/download/v0.1.0-alpha.135/thegn-v0.1.0-alpha.135-aarch64-apple-darwin.tar.gz"
+      sha256 "28f49324a6a65e2bc002e89753373dc45bc71174550285f74da7be068607a961"
     end
   end
 
@@ -25,6 +25,9 @@ class Thegn < Formula
 
   def install
     bin.install "thegn"
+    # Linux musl bridge pushed into Sprites/Vercel sandboxes; the host finds it
+    # next to its own executable.
+    bin.install "thegn-musl"
     bin.install_symlink "thegn" => "tg"
   end
 
