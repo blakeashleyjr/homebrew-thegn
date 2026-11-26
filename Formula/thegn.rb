@@ -6,7 +6,7 @@
 class Thegn < Formula
   desc "Terminal-native git-worktree IDE that is its own terminal multiplexer"
   homepage "https://github.com/blakeashleyjr/thegn"
-  version "0.1.0-alpha.137"
+  version "0.1.0-alpha.138"
   license any_of: ["MIT", "Apache-2.0"]
 
   depends_on :macos
@@ -14,8 +14,8 @@ class Thegn < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/blakeashleyjr/thegn/releases/download/v0.1.0-alpha.137/thegn-v0.1.0-alpha.137-aarch64-apple-darwin.tar.gz"
-      sha256 "1a26e6b703d9d4bcc47d365ce924a4ba815f65ac9af8195c43ba64c1faacef81"
+      url "https://github.com/blakeashleyjr/thegn/releases/download/v0.1.0-alpha.138/thegn-v0.1.0-alpha.138-aarch64-apple-darwin.tar.gz"
+      sha256 "f9a4dd300f5238479c69674d52dc7b064981d9a5865d0b40b0a4f16a6b591a4f"
     end
   end
 
